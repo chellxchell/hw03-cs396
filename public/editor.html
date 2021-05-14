@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Doctor Who GUI Editor</title>
+        <link rel="stylesheet" href="css/editor.css">
+    </head>
+    <body>
+        <header>
+            <h1>Doctor Who Editor</h1>
+            <button id="reset" class="btn">Reset Data</button>
+        </header>
+        <aside>
+            <section id="doctors">
+                <!-- List of doctors goes here -->
+            </section>
+            <button id="new-doctor">Add New Doctor</button>
+        </aside>
+        <main>
+
+            <section id="doctor">
+                <!-- Selected doctor goes here -->
+                <div id="doctor-display"></div>
+                <form name="new-doctor-form" id="new-doctor-form" style="visibility: hidden; display: flex; flex-direction: column;" method="post">
+                    <!-- Name -->
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" value="">
+                
+                    <!-- Seasons -->
+                    <label for="seasons">Seasons</label>
+                    <input type="text" id="seasons" name="seasons" value="">
+                
+                    <!-- Ordering -->
+                    <label for="ordering">Ordering</label>
+                    <input type="text" id="ordering" name="ordering" value="">
+                
+                    <!-- Image -->
+                    <label for="image_url">Image</label>
+                    <input type="text" id="image_url" name="image" value="">
+                
+                    <!-- Buttons -->
+                    <div>
+                        <input class="btn btn-main" id="create"type="submit" value="Save">
+                        <button class="btn" id="cancel">Cancel</button>
+                    </div>
+                </form>
+                <form name="edit-doctor-form" id="edit-doctor-form" style="visibility: hidden; display: flex; flex-direction: column;" method="post">
+                    <!-- Name -->
+                    <label for="name">Name</label>
+                    <input type="text" id="edit-name" name="name" value="">
+                
+                    <!-- Seasons -->
+                    <label for="seasons">Seasons</label>
+                    <input type="text" id="edit-seasons" name="seasons" value="">
+                
+                    <!-- Ordering -->
+                    <label for="ordering">Ordering</label>
+                    <input type="text" id="edit-ordering" name="ordering" value="">
+                
+                    <!-- Image -->
+                    <label for="image_url">Image</label>
+                    <input type="text" id="edit-image_url" name="image" value="">
+                
+                    <!-- Buttons -->
+                    <div>
+                        <input class="btn btn-main" id="edit-create"type="submit" value="Save">
+                        <button class="btn" id="edit-cancel">Cancel</button>
+                    </div>
+                </form>
+            </section>
+            
+            <section id="companions">
+                <!-- Doctor's corresponding companions go here -->
+                Selected doctor's companions go here.
+            </section>
+
+        </main>
+        <script src="scripts/editor.js" type="text/javascript"></script>
+    </body>
+</html>
